@@ -1,5 +1,13 @@
+/* Importe a fonte Fira Code no seu arquivo de estilo, se ainda não estiver importada */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+
+/* Defina a classe para usar a fonte Fira Code */
+.fira-code {
+    font-family: 'Fira Code', monospace;
+}
+
 body {
-    font-family: 'Roboto Mono', monospace; /* Substitua 'Roboto Mono' pela sua fonte monoespaçada escolhida */
+    /* font-family: 'Roboto Mono', monospace; Substitua 'Roboto Mono' pela sua fonte monoespaçada escolhida */
     background-color: #121212; /* Cor de fundo escura */
     color: #fff; /* Cor do texto principal */
 }
@@ -11,14 +19,48 @@ body {
     align-items: center;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: #fff; /* Cor dos links na barra de navegação */
+.highlight {
+    background-color: #555; /* Tom de cinza escuro para o destaque */
+    color: #fff; /* Texto branco para contrastar com o fundo preto */
+    padding: 0 2px; /* Espaçamento interno para suavizar o destaque */
+    border-radius: 2px; /* Bordas arredondadas para um visual mais suave */
 }
 
-.navbar-dark .navbar-brand {
-    color: #fff; /* Cor do texto da marca */
+.cursor {
+    display: inline-block;
+    animation: blink 1s infinite;
 }
 
-.ms-n5 {
-    margin-left: -40px;
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+.search-icon, .navbar-toggler-button {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.search-icon:hover, .navbar-toggler-button:hover {
+    color: #555; /* Cor de destaque ao passar o mouse (cinza escuro) */
+}
+
+/* Estilo da sidebar em telas grandes (ex: largura maior que 768px) */
+@media (min-width: 768px) {
+    .offcanvas {
+        width: 300px; /* Largura reduzida para telas grandes */
+    }
+}
+
+/* Estilo para adicionar linhas separadoras entre os itens da sidebar */
+.navbar-nav li a::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #555; /* Cor da linha separadora (cinza escuro) */
+    margin-top: 10px; /* Espaçamento entre os itens e a linha separadora */
 }
