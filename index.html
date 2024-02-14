@@ -14,10 +14,10 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="icon" href="/resources/img/terminal-icon.png" type="image/x-icon">
+    <link rel="icon" href="./resources/img/cube-solid.svg" type="image/svg+xml">
 </head>
 <body>       
-    <nav class="navbar navbar-dark">
+    <nav class="navbar navbar-dark my-3">
         <div class="container-fluid">
             <!-- Menu sidebar -->
             <a class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle navigation">
@@ -33,25 +33,25 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link active" aria-current="page" href="./">
                                 <i class="fa-regular fa-file-lines mx-2"></i>
                                 Home
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">
+                            <a class="nav-link" aria-current="page" href="./cubes/working-on-it.html">
                                 <i class="fa-regular fa-file-lines mx-2"></i>
                                 Articles
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">
+                            <a class="nav-link" aria-current="page" href="./cubes/working-on-it.html">
                                 <i class="fa-regular fa-file-lines mx-2"></i>
                                 Projects
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">
+                            <a class="nav-link" aria-current="page" href="./cubes/working-on-it.html">
                                 <i class="fa-regular fa-file-lines mx-2"></i>
                                 About
                             </a>
@@ -61,13 +61,13 @@
             </div>
     
             <!-- Search button -->
-            <div class="ms-auto"> <!-- Adiciona a classe "ms-auto" para mover o conteúdo para a direita -->
+            <!-- <div class="ms-auto">
                 <form class="d-flex">
                     <button class="btn" type="submit">
                         <i class="fas fa-search search-icon"></i>
                     </button>
                 </form>
-            </div>
+            </div> -->
         </div>
     </nav>
     
@@ -89,35 +89,37 @@
                     <p class="mb-4">
                         Back end developer from Brazil, studying Information Systems at <a href="https://ufr.edu.br/" class="text-decoration-none">UFR</a>, 
                         Self-taught English learning, striving for fluency in reading, writing, listening, and speaking.
-                        Passionate about Software Engineering and Continuous Learning. Proficient in <span class="highlight">technologies</span> like: 
-                        <span class="lead" id="tech-highlight"> </span><span class="cursor">|</span>
+                        Passionate about Software Engineering and Continuous Learning. Proficient in <span class="highlight">technologies</span> like:
+                        <br>
+                        <span class="fira-code">></span>
+                        <span class="fira-code" id="tech-highlight">$</span><span class="cursor fira-code">|</span>
                     </p>
-                    <!-- Links -->
+                    <!-- Social Links -->
                     <div class="row align-items-center">
                         <div class="col text-center">
                             <ul class="list-inline d-flex justify-content-start">
                                 <li class="list-inline-item me-4">
-                                    <a href="mailto:felipealvesrrodrigues@outlook.com" target=”_blank” class="text-light text-decoration-none">
-                                        <i class="fa-regular fa-envelope"></i>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item me-4">
-                                    <a href="https://www.linkedin.com/in/felipealvesrrodrigues" target=”_blank” class="text-light text-decoration-none">
+                                    <a href="https://www.linkedin.com/in/felipealvesrrodrigues" target=”_blank” class="social-link text-decoration-none">
                                         <i class="fa-brands fa-linkedin"></i>
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://www.github.com/felipeverse" target=”_blank” class="text-light text-decoration-none">
+                                    <a href="https://www.github.com/felipeverse" target=”_blank” class="social-link text-decoration-none">
                                         <i class="fa-brands fa-github"></i>
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://twitter.com/felipeverse" target="_blank" class="text-light text-decoration-none">
+                                    <a href="mailto:felipealvesrrodrigues@outlook.com" target=”_blank” class="social-link text-decoration-none">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item me-4">
+                                    <a href="https://twitter.com/felipeverse" target="_blank" class="social-link text-decoration-none">
                                         <i class="fa-brands fa-twitter"></i>
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://instagram.com/felipeverse" target="_blank" class="text-light text-decoration-none">
+                                    <a href="https://instagram.com/felipeverse" target="_blank" class="social-link text-decoration-none">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
@@ -127,7 +129,11 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+    
+    
+    <!-- Particles.js background -->
+    <canvas class="background"></canvas>
 </body>
 
 <!-- bootstrap scripts -->
@@ -135,5 +141,9 @@
 
 <!-- personal scripts -->
 <script src="./resources/js/tech-highlight.js"></script>
+
+<!-- Particles.js -->
+<script src="./resources/js/particles.js/particles.min.js"></script>
+<script src="./resources/js/particles-background.js"></script>
 
 </html>

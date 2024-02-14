@@ -1,29 +1,62 @@
-/* Importe a fonte Fira Code no seu arquivo de estilo, se ainda não estiver importada */
+/* Importação e definição da classe para aplicar a fonte Fira Code */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
 
-/* Defina a classe para usar a fonte Fira Code */
 .fira-code {
     font-family: 'Fira Code', monospace;
 }
 
 body {
-    /* font-family: 'Roboto Mono', monospace; Substitua 'Roboto Mono' pela sua fonte monoespaçada escolhida */
-    background-color: #121212; /* Cor de fundo escura */
-    color: #fff; /* Cor do texto principal */
+    background-color: #121212;
+    color: #fff;
+}
+
+.background {
+    position:absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2; /* Ajuste o valor conforme necessário (entre 0 e 1) */
+    /* pointer-events: none; */
+}
+
+/* Estilo para adicionar linhas separadoras entre os itens da sidebar */
+.navbar-nav li a::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #555;
+    margin-top: 10px;
+}
+
+.search-icon, .navbar-toggler-button, .social-link {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.search-icon:hover, .navbar-toggler-button:hover, .social-link:hover {
+    color: #555;
+}
+
+/* Estilo da sidebar em telas grandes (ex: largura maior que 768px) */
+@media (min-width: 768px) {
+    .offcanvas {
+        width: 300px; /* Largura reduzida para telas grandes */
+    }
 }
 
 /* Estilos customizados para centralizar o conteúdo principal */
 .content {
-    min-height: calc(100vh - 10em); /* Ajuste conforme a altura da navbar */
+    min-height: calc(100vh - 10em);
     display: flex;
     align-items: center;
 }
 
 .highlight {
-    background-color: #555; /* Tom de cinza escuro para o destaque */
-    color: #fff; /* Texto branco para contrastar com o fundo preto */
-    padding: 0 2px; /* Espaçamento interno para suavizar o destaque */
-    border-radius: 2px; /* Bordas arredondadas para um visual mais suave */
+    background-color: #555;
+    color: #fff;
+    padding: 0 3px;
+    border-radius: 2px;
 }
 
 .cursor {
@@ -38,29 +71,4 @@ body {
     51%, 100% {
         opacity: 0;
     }
-}
-
-.search-icon, .navbar-toggler-button {
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.search-icon:hover, .navbar-toggler-button:hover {
-    color: #555; /* Cor de destaque ao passar o mouse (cinza escuro) */
-}
-
-/* Estilo da sidebar em telas grandes (ex: largura maior que 768px) */
-@media (min-width: 768px) {
-    .offcanvas {
-        width: 300px; /* Largura reduzida para telas grandes */
-    }
-}
-
-/* Estilo para adicionar linhas separadoras entre os itens da sidebar */
-.navbar-nav li a::after {
-    content: '';
-    display: block;
-    height: 1px;
-    background-color: #555; /* Cor da linha separadora (cinza escuro) */
-    margin-top: 10px; /* Espaçamento entre os itens e a linha separadora */
 }
