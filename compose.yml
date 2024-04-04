@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - APP_CODEBASE_PATH={$APP_CODEBASE_PATH}
+    volumes:
+      - ${APP_CODEBASE_PATH}:/app:rw
+    ports:
+      - "8080:8080"
+      
